@@ -1,0 +1,1 @@
+export { IconVision } from './IconVision'
