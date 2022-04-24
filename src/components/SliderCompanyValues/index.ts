@@ -1,1 +1,0 @@
-export { SliderCompanyValues } from './SliderCompanyValues'

@@ -1,32 +1,26 @@
 import {
   Box,
   Center,
+  Divider,
   Heading,
   Image,
   Stack,
+  Tag,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react'
 
 import type { PersonCardProps } from './types'
 
-{
-  /* <img src="https://paintpack.com.br/wp-content/uploads/2022/04/Mirian-Barros-1.jpeg" alt="" srcset="https://paintpack.com.br/wp-content/uploads/2022/04/Mirian-Barros-1.jpeg 400w, https://paintpack.com.br/wp-content/uploads/2022/04/Mirian-Barros-1-300x300.jpeg 300w, https://paintpack.com.br/wp-content/uploads/2022/04/Mirian-Barros-1-150x150.jpeg 150w, https://paintpack.com.br/wp-content/uploads/2022/04/Mirian-Barros-1-50x50.jpeg 50w" sizes="(max-width: 400px) 100vw, 400px" style="max-height: 456.8px;" class="active"></img> */
-}
-
-const IMAGE =
-  'https://paintpack.com.br/wp-content/uploads/2022/04/Mirian-Barros-1.jpeg'
-
-export function PersonCard({ prop = 'PersonCard' }: PersonCardProps) {
+export function PersonCard({ name, date, role, image }: PersonCardProps) {
   return (
-    <Center py={2}>
+    <Center py={6}>
       <Box
         role={'group'}
         p={6}
-        maxW={'400px'}
+        maxW={'380px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.800')}
-        boxShadow={'2xl'}
+        bg={'white'}
+        boxShadow={'lg'}
         rounded={'3xl'}
         pos={'relative'}
         zIndex={1}
@@ -44,7 +38,7 @@ export function PersonCard({ prop = 'PersonCard' }: PersonCardProps) {
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${IMAGE})`,
+            backgroundImage: `url(${image})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -55,18 +49,29 @@ export function PersonCard({ prop = 'PersonCard' }: PersonCardProps) {
             width={320}
             mx={'auto'}
             objectFit={'cover'}
-            src={IMAGE}
+            src={image}
           />
+          <Tag
+            pos={'absolute'}
+            bottom={'10px'}
+            right={0}
+            size={'lg'}
+            fontFamily={'heading'}
+            fontWeight={'bold'}
+            fontSize={'2xl'}
+            colorScheme={'orange'}
+            boxShadow={'md'}
+          >
+            {date}
+          </Tag>
         </Box>
-        <Stack pt={8} align={'center'}>
+        <Stack pt={7} align={'center'}>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-            Míriam Barros
+            {name}
           </Heading>
-          {/* <Text fontWeight={800} fontSize={'xl'}>
-            20/04
-          </Text> */}
+          <Divider />
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-            Manutenção
+            {role}
           </Text>
         </Stack>
       </Box>

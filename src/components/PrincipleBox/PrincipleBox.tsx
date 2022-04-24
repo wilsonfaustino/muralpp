@@ -18,7 +18,8 @@ export function PrincipleBox({
       pos={'relative'}
       transition={'all 0.3s ease-in-out'}
       transform={active ? 'scale(1.03)' : 'scale(1)'}
-      boxShadow={active ? '0px 0px 10px rgba(0, 0, 0, 0.5)' : 'none'}
+      boxShadow={active ? '0px 5px 5px rgba(0, 0, 0, 0.3)' : 'none'}
+      border={active ? '2px solid gray' : 'none'}
     >
       <Heading textAlign={'center'} color={'gray.600'}>
         {title}

@@ -1,3 +1,6 @@
 export type PersonCardProps = {
-  prop?: string
+  name: string
+  role?: string
+  image: string
+  date: string
 }

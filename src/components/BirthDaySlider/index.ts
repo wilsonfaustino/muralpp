@@ -1,0 +1,1 @@
+export { BirthDaySlider } from './BirthDaySlider'

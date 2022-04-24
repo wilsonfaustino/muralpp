@@ -7,20 +7,17 @@ import { IconValues } from '../IconValues'
 import { IconVision } from '../IconVision'
 import { PrincipleBox } from '../PrincipleBox'
 
-import type { GridBottomProps } from './types'
-
-export function GridBottom({ prop = 'GridBottom' }: GridBottomProps) {
+export function GridBottom() {
   const [currentItem, setCurrentItem] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (currentItem === 2) {
-        setCurrentItem(0)
-      }
-      setCurrentItem(currentItem + 1)
-    }, 5000)
+      setCurrentItem((prev) => (prev === 2 ? 0 : prev + 1))
+    }, 10000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+    }
   }, [currentItem])
   return (
     <Grid
