@@ -14,7 +14,7 @@ import type { SecurityBoxProps } from './types'
 export function SecurityBox({ prop = 'SecurityBox' }: SecurityBoxProps) {
   return (
     <Box
-      rounded={'md'}
+      rounded={'3xl'}
       h={'full'}
       py={4}
       px={6}

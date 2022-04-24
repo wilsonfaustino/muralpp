@@ -19,23 +19,23 @@ const IMAGE =
 
 export function PersonCard({ prop = 'PersonCard' }: PersonCardProps) {
   return (
-    <Center py={12}>
+    <Center py={2}>
       <Box
         role={'group'}
         p={6}
-        maxW={'330px'}
+        maxW={'400px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
-        rounded={'lg'}
+        rounded={'3xl'}
         pos={'relative'}
         zIndex={1}
       >
         <Box
-          rounded={'lg'}
+          rounded={'2xl'}
           mt={-12}
           pos={'relative'}
-          height={'230px'}
+          height={'270px'}
           _after={{
             transition: 'all .3s ease',
             content: '""',
@@ -48,27 +48,23 @@ export function PersonCard({ prop = 'PersonCard' }: PersonCardProps) {
             filter: 'blur(15px)',
             zIndex: -1,
           }}
-          _groupHover={{
-            _after: {
-              filter: 'blur(20px)',
-            },
-          }}
         >
           <Image
-            rounded={'lg'}
-            height={230}
-            width={282}
+            rounded={'2xl'}
+            height={280}
+            width={320}
+            mx={'auto'}
             objectFit={'cover'}
             src={IMAGE}
           />
         </Box>
-        <Stack pt={10} align={'center'}>
+        <Stack pt={8} align={'center'}>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
             Míriam Barros
           </Heading>
-          <Text fontWeight={800} fontSize={'xl'}>
-            20/04/2022
-          </Text>
+          {/* <Text fontWeight={800} fontSize={'xl'}>
+            20/04
+          </Text> */}
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
             Manutenção
           </Text>
