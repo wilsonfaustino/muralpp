@@ -5,7 +5,7 @@ import type { SliderProps } from './types'
 
 export function Slider({ children, settings }: SliderProps) {
   return (
-    <Box pos={'relative'} maxW={'400px'} zIndex={1} mt={'-25px'} pt={'15px'}>
+    <Box pos={'relative'} maxW={'400px'} mt={'-25px'} pt={'15px'} mx={'auto'}>
       <SlickSlider {...settings}>{children}</SlickSlider>
     </Box>
   )

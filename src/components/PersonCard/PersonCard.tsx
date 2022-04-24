@@ -65,7 +65,7 @@ export function PersonCard({ name, date, role, image }: PersonCardProps) {
             {date}
           </Tag>
         </Box>
-        <Stack pt={7} align={'center'}>
+        <Stack pt={7} align={'center'} mt={'-5px'} spacing={1}>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
             {name}
           </Heading>

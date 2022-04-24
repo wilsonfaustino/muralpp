@@ -3,8 +3,7 @@ export const personsData = [
     name: 'Wilson Faustino',
     role: 'Metalgrafia',
     date: '01/04',
-    image:
-      'https://paintpack.com.br/wp-content/uploads/2022/04/Wilson_02-e1650649003733.jpg',
+    image: 'wilson-faustino.jpg',
   },
   {
     name: 'Carola Mesquita',

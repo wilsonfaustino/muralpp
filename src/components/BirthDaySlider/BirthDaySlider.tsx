@@ -1,10 +1,10 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useBreakpointValue } from '@chakra-ui/react'
 
 import { PersonCard } from '../PersonCard'
 import { Slider } from '../Slider'
 
 import { personsData as persons } from './personsData'
-// import type { BirthDaySliderProps } from './types'
+import type { BirthDaySliderProps } from './types'
 
 const sliderSettings = {
   dots: false,
@@ -19,8 +19,14 @@ const sliderSettings = {
 }
 
 export function BirthDaySlider() {
+  const bgHeight = useBreakpointValue({
+    base: '90px',
+    md: '115px',
+    lg: '120px',
+  })
+  const bgSize = useBreakpointValue({ base: '150px', md: '200px', lg: '280px' })
   return (
-    <Box rounded={'md'} p={4} h={'full'} pos={'relative'}>
+    <Box rounded={'md'} px={'auto'} h={'full'} pos={'relative'} mx={'auto'}>
       <Slider settings={sliderSettings}>
         {persons.map((person) => (
           <PersonCard
@@ -34,14 +40,14 @@ export function BirthDaySlider() {
       </Slider>
       <Box
         w={'full'}
-        h={'150px'}
+        h={bgHeight}
         zIndex={'1'}
         pos={'absolute'}
-        bottom={'-10px'}
+        bottom={'-30px'}
         left={0}
         bgImage="url('/birthday-cake.png')"
-        bgPos={'bottom center'}
-        bgSize={'300px'}
+        bgPos={'bottom -25px center'}
+        bgSize={bgSize}
         bgRepeat={'no-repeat'}
       ></Box>
     </Box>
