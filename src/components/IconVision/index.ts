@@ -1,1 +1,0 @@
-export { IconVision } from './IconVision'

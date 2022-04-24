@@ -9,9 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { MdCheckCircle } from 'react-icons/md'
 
-import type { SecurityBoxProps } from './types'
-
-export function SecurityBox({ prop = 'SecurityBox' }: SecurityBoxProps) {
+export function SecurityBox() {
   return (
     <Box
       rounded={'3xl'}

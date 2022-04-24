@@ -1,1 +1,0 @@
-export { IconValues } from './IconValues'

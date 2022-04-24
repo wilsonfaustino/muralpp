@@ -1,10 +1,10 @@
 import { render, screen } from '~/utils/tests'
 
-import { GridBottom } from '.'
+import { Icons } from '.'
 
-describe('<GridBottom />', () => {
+describe('<Icons />', () => {
   it('renders', () => {
-    render(<GridBottom />)
+    render(<Icons />)
 
     expect(true).toBe(true)
   })
