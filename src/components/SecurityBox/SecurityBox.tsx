@@ -13,20 +13,21 @@ export function SecurityBox() {
   return (
     <Box
       rounded={'3xl'}
-      h={'full'}
+      // h={'full'}
       py={4}
       px={6}
       bgGradient={'linear-gradient(45deg, #edeaea 0%, #ffffff 99%)'}
     >
       <Heading
         textAlign={'center'}
+        fontWeight={'normal'}
         color={'gray.600'}
         textTransform={'uppercase'}
       >
         SAÚDE E SEGURANÇA NO TRABALHO
       </Heading>
       <Flex flexDirection={'row'} gap={3} mt={10}>
-        <List spacing={6} fontSize={'2xl'}>
+        <List spacing={2} fontSize={'2xl'} fontWeight={'light'}>
           <ListItem>
             <ListIcon as={MdCheckCircle} color="green.500" />
             Colocamos a saúde e a segurança em primeiro lugar.

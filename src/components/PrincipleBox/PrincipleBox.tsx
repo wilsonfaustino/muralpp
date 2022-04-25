@@ -21,7 +21,11 @@ export function PrincipleBox({
       boxShadow={active ? '0px 5px 5px rgba(0, 0, 0, 0.3)' : 'none'}
       border={active ? '2px solid gray' : 'none'}
     >
-      <Heading textAlign={'center'} color={'gray.600'}>
+      <Heading
+        textAlign={'center'}
+        color={'gray.600'}
+        fontWeight={active ? 'bold' : 'normal'}
+      >
         {title}
       </Heading>
       <Center my={4}>
@@ -54,7 +58,12 @@ export function PrincipleBox({
           {icon}
         </Circle>
       </Center>
-      <Text textAlign={'center'} color={'gray.600'} fontSize={'2xl'}>
+      <Text
+        textAlign={'center'}
+        color={'gray.600'}
+        fontSize={'2xl'}
+        fontWeight={active ? 'normal' : 'light'}
+      >
         {description}
       </Text>
     </Box>

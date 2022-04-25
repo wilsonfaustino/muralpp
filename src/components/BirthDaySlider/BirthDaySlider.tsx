@@ -4,7 +4,7 @@ import { PersonCard } from '../PersonCard'
 import { Slider } from '../Slider'
 
 import { personsData as persons } from './personsData'
-import type { BirthDaySliderProps } from './types'
+// import type { BirthDaySliderProps } from './types'
 
 const sliderSettings = {
   dots: false,
