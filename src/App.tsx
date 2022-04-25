@@ -49,7 +49,7 @@ export function App() {
         borderTop={'2px solid'}
         borderColor={'gray.400'}
       >
-        <Image src={'/logoPaintpack.svg'} h={'70px'} />
+        <Image src={'/logoPaintPack.svg'} h={'70px'} />
       </Flex>
     </Flex>
   )
