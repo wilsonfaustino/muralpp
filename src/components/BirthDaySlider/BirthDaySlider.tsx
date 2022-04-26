@@ -1,4 +1,4 @@
-import { Box, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 
 import { PersonCard } from '../PersonCard'
 import { Slider } from '../Slider'
@@ -19,12 +19,12 @@ const sliderSettings = {
 }
 
 export function BirthDaySlider() {
-  const bgHeight = useBreakpointValue({
-    base: '90px',
-    md: '115px',
-    lg: '120px',
-  })
-  const bgSize = useBreakpointValue({ base: '150px', md: '200px', lg: '280px' })
+  // const bgHeight = useBreakpointValue({
+  //   base: '90px',
+  //   md: '115px',
+  //   lg: '120px',
+  // })
+  // const bgSize = useBreakpointValue({ base: '150px', md: '200px', lg: '280px' })
   return (
     <Box rounded={'md'} px={'auto'} h={'full'} pos={'relative'} mx={'auto'}>
       <Slider settings={sliderSettings}>
@@ -38,7 +38,10 @@ export function BirthDaySlider() {
           />
         ))}
       </Slider>
-      <Box
+      <Heading textAlign={'center'} fontSize={'5xl'} color={'whiteAlpha.900'}>
+        Aniversariantes do Mês
+      </Heading>
+      {/* <Box
         w={'full'}
         h={bgHeight}
         zIndex={'1'}
@@ -49,7 +52,7 @@ export function BirthDaySlider() {
         bgPos={'bottom -25px center'}
         bgSize={bgSize}
         bgRepeat={'no-repeat'}
-      ></Box>
+      ></Box> */}
     </Box>
   )
 }

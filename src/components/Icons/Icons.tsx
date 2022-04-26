@@ -13,7 +13,7 @@ export function Icons({ icon }: IconsProps) {
   }
 
   return (
-    <Icon viewBox="0 0 512 512" w={8} h={8}>
+    <Icon viewBox="0 0 512 512" w={10} h={10}>
       <path fill="currentColor" d={icon ? icons[icon] : icons['mission']} />
     </Icon>
   )

@@ -30,14 +30,15 @@ export function PrincipleBox({
       </Heading>
       <Center my={4}>
         <Circle
-          size={'40px'}
+          size={'60px'}
+          my={2}
           bg={'red.500'}
           color={'white'}
           position={'relative'}
           _before={{
             content: `""`,
             display: 'block',
-            width: '130px',
+            width: '200px',
             height: '2px',
             background: 'gray.300',
             left: '20',
@@ -47,7 +48,7 @@ export function PrincipleBox({
           _after={{
             content: `""`,
             display: 'block',
-            width: '130px',
+            width: '200px',
             height: '2px',
             background: 'gray.300',
             right: '20',

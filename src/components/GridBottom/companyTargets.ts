@@ -14,7 +14,7 @@ export const companyTargets = [
   {
     title: 'Nossos Valores',
     description:
-      'Respeito às pessoas, à Diversidade e ao Meio Ambiente Responsabilidade • Ética e Transparência • Qualidade Inovação • Pontualidade • Paixão.',
+      'Respeito às pessoas, à Diversidade e ao Meio Ambiente • Responsabilidade • Ética e Transparência • Qualidade Inovação • Pontualidade • Paixão.',
     icon: 'values',
   },
 ]

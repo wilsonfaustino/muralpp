@@ -18,16 +18,11 @@ export function SecurityBox() {
       px={6}
       bgGradient={'linear-gradient(45deg, #edeaea 0%, #ffffff 99%)'}
     >
-      <Heading
-        textAlign={'center'}
-        fontWeight={'normal'}
-        color={'gray.600'}
-        textTransform={'uppercase'}
-      >
-        SAÚDE E SEGURANÇA NO TRABALHO
+      <Heading textAlign={'center'} color={'gray.600'}>
+        Saúde e Segurança no trabalho
       </Heading>
-      <Flex flexDirection={'row'} gap={3} mt={10}>
-        <List spacing={2} fontSize={'2xl'} fontWeight={'light'}>
+      <Flex flexDirection={'row'} gap={3} mt={10} alignItems={'center'}>
+        <List spacing={6} fontSize={'2xl'} fontWeight={'light'}>
           <ListItem>
             <ListIcon as={MdCheckCircle} color="green.500" />
             Colocamos a saúde e a segurança em primeiro lugar.
@@ -48,7 +43,7 @@ export function SecurityBox() {
         <Image
           rounded={'md'}
           src={'/Seguranca-trabalho-EPI.png'}
-          maxH={'350px'}
+          maxH={'400px'}
           alt={'Segurança do Trabalho'}
           mx={'auto'}
         />
