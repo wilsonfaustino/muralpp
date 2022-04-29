@@ -1,0 +1,1 @@
+export { WeatherFooter } from './WeatherFooter'

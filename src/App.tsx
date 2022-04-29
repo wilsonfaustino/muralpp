@@ -1,10 +1,33 @@
-import { Center, Flex, Grid, GridItem, Image } from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
+
+import { Flex, Grid, GridItem } from '@chakra-ui/react'
 
 import { BirthDaySlider } from './components/BirthDaySlider'
 import { GridBottom } from './components/GridBottom'
 import { SecurityBox } from './components/SecurityBox'
+import { WeatherFooter } from './components/WeatherFooter'
+import { WeatherData } from './components/WeatherFooter/types'
 
 export function App() {
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null)
+
+  const lat = -23.60130512729346
+  const lng = -46.645420595784444
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/weather?lat=${lat}&lon=${lng}&appid=${
+          import.meta.env.VITE_API_KEY
+        }&units=metric&lang=pt_br`
+      )
+      const data = await response.json()
+      setWeatherData({ ...data })
+      // console.log(data)
+    }
+    fetchData()
+  }, [lat, lng])
+
   return (
     <Flex
       w="full"
@@ -39,41 +62,8 @@ export function App() {
           </GridItem>
         </Grid>
       </Flex>
-      <Flex
-        w={'full'}
-        h={'110px'}
-        px={8}
-        alignItems={'center'}
-        justifyContent={'space-between'}
-        bgColor={'gray.100'}
-        boxShadow={'0px -2px 4px rgba(0, 0, 0, 0.1)'}
-        borderTop={'2px solid'}
-        borderColor={'gray.400'}
-      >
-        <Center
-          w={'300px'}
-          h={'90px'}
-          fontFamily={'heading'}
-          border={'2px dashed gray'}
-          borderRadius={'lg'}
-          fontSize={'2xl'}
-          fontWeight={'bold'}
-        >
-          Info Horas
-        </Center>
-        <Center
-          w={'300px'}
-          h={'90px'}
-          fontFamily={'heading'}
-          border={'2px dashed gray'}
-          borderRadius={'lg'}
-          fontSize={'2xl'}
-          fontWeight={'bold'}
-        >
-          Previsão do tempo
-        </Center>
-        <Image src={'/logoPaintPack.svg'} h={'70px'} />
-      </Flex>
+      <WeatherFooter weatherData={weatherData} />
+      {/* {weatherData && <pre>{JSON.stringify(weatherData, null, 2)}</pre>} */}
     </Flex>
   )
 }
