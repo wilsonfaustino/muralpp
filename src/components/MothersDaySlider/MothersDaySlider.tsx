@@ -89,15 +89,15 @@ const sliderSettings = {
 
 export function MothersDaySlider() {
   return (
-    <Box w={'1920px'} h={'950px'}>
+    <Box w={'1920px'} h={'1080px'}>
       <SlickSlider {...sliderSettings}>
         {Object.entries(mothers).map(([key, { title, image }]) => (
-          <Box key={key} w={'1920px'} h={'full'} pos={'relative'}>
+          <Box key={key} w={'1920px'} h={'980px'} pos={'relative'} my={4}>
             <Image
               src={image.source}
               alt={image.alt}
               w={'1920px'}
-              h={'950px'}
+              h={'980px'}
               fit={title === 'Final' ? 'cover' : 'contain'}
               align={'center'}
               mx={'auto'}
