@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 
-import { Flex, Grid, GridItem } from '@chakra-ui/react'
+import { Flex, Grid, GridItem, Image } from '@chakra-ui/react'
 
 import { BirthDaySlider } from './components/BirthDaySlider'
 import { GridBottom } from './components/GridBottom'
+import { MothersDaySlider } from './components/MothersDaySlider'
 import { SecurityBox } from './components/SecurityBox'
 import { WeatherFooter } from './components/WeatherFooter'
 import { WeatherData } from './components/WeatherFooter/types'
@@ -32,11 +33,12 @@ export function App() {
     <Flex
       w="full"
       h="100vh"
-      // bgGradient="linear(135deg, gray.100, gray.400)"
-      bgGradient="linear(276deg,#2b87da 33%,#29c4a9 77%)"
+      bgGradient="linear(135deg, red.500, red.800)"
+      // bgGradient="linear(276deg,#2b87da 33%,#29c4a9 77%)"
       flexDir={'column'}
     >
-      <Flex p={8} flexDir={'column'} gap={4} flexGrow={1}>
+      <MothersDaySlider />
+      {/* <Flex p={8} flexDir={'column'} gap={4} flexGrow={1}>
         <Grid
           w={'full'}
           templateRows={'1fr'}
@@ -62,7 +64,7 @@ export function App() {
           </GridItem>
         </Grid>
       </Flex>
-      <WeatherFooter weatherData={weatherData} />
+      <WeatherFooter weatherData={weatherData} /> */}
       {/* {weatherData && <pre>{JSON.stringify(weatherData, null, 2)}</pre>} */}
     </Flex>
   )
