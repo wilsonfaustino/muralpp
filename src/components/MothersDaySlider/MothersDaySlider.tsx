@@ -84,7 +84,7 @@ const sliderSettings = {
   infinite: true,
   speed: 500,
   autoplay: true,
-  autoplaySpeed: 10000,
+  autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
 }
@@ -94,39 +94,48 @@ export function MothersDaySlider() {
     <Box w={'1920px'} h={'1080px'}>
       <SlickSlider {...sliderSettings}>
         {Object.entries(mothers).map(([key, { title, image }]) => (
-          <Image
-            key={key}
-            src={image.source}
-            alt={image.alt}
-            boxSize={'1080px'}
-            fit={'contain'}
-            align={'center'}
-          />
-          // <Box key={key} bgImage={image.source} w={'full'} h={'full'}>
-          //   <Heading
-          //     textAlign={'center'}
-          //     fontSize={'5xl'}
-          //     color={'whiteAlpha.900'}
-          //   >
-          //     {title}
-          //   </Heading>
-          // </Box>
-        ))}
-      </SlickSlider>
-      {/* <Slider settings={sliderSettings}>
-        {Object.entries(mothers).map(([key, { title, image }]) => (
-          // <Image key={key} src={image.source} alt={image.alt} h={'full'} />
-          <Box key={key} bgImage={image.source} w={'full'} h={'full'}>
-            <Heading
-              textAlign={'center'}
-              fontSize={'5xl'}
-              color={'whiteAlpha.900'}
-            >
-              {title}
-            </Heading>
+          <Box key={key} w={'1920px'} h={'full'} pos={'relative'}>
+            <Image
+              src={image.source}
+              alt={image.alt}
+              w={'1920px'}
+              h={'1080px'}
+              fit={title === 'Final' ? 'cover' : 'contain'}
+              align={'center'}
+              mx={'auto'}
+            />
+            {title !== 'Final' && (
+              <>
+                <Image
+                  src={'/logoPaintPackWhite.svg'}
+                  h={'30px'}
+                  position={'absolute'}
+                  top={6}
+                  right={6}
+                />
+                <Box
+                  p={6}
+                  pos={'absolute'}
+                  right={'300px'}
+                  bottom={10}
+                  bgColor={'red.500'}
+                  opacity={0.8}
+                  rounded={'lg'}
+                  boxShadow={'lg'}
+                >
+                  <Heading
+                    textAlign={'center'}
+                    fontSize={'5xl'}
+                    color={'gray.100'}
+                  >
+                    {title}
+                  </Heading>
+                </Box>
+              </>
+            )}
           </Box>
         ))}
-      </Slider> */}
+      </SlickSlider>
     </Box>
   )
 }
