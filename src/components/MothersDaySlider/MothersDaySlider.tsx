@@ -2,8 +2,6 @@
 import { Box, Heading, Image } from '@chakra-ui/react'
 import SlickSlider from 'react-slick'
 
-import { Slider } from '../Slider'
-
 const mothers = {
   ALINE: {
     title: 'Aline e Bia',
@@ -16,7 +14,7 @@ const mothers = {
     title: 'Carola e Gatinhos',
     image: {
       source: '/mothersday/Carola.jpeg',
-      alt: 'Carola e Gatinhos',
+      alt: 'Carola e seus gatos',
     },
   },
   LUANA: {
