@@ -4,7 +4,7 @@ import { MothersDaySlider } from '.'
 
 describe('<MothersDaySlider />', () => {
   it('renders', () => {
-    render(<MothersDaySlider prop="mothersdayslider" />)
+    render(<MothersDaySlider />)
 
     expect(true).toBe(true)
   })
