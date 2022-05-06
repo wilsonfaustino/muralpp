@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Flex, Grid, GridItem, Image } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Image } from '@chakra-ui/react'
 
 import { BirthDaySlider } from './components/BirthDaySlider'
 import { GridBottom } from './components/GridBottom'
@@ -30,42 +30,46 @@ export function App() {
   }, [lat, lng])
 
   return (
-    <Flex
-      w="full"
-      h="100vh"
-      bgGradient="linear(135deg, red.500, red.800)"
-      // bgGradient="linear(276deg,#2b87da 33%,#29c4a9 77%)"
-      flexDir={'column'}
-    >
-      <MothersDaySlider />
-      {/* <Flex p={8} flexDir={'column'} gap={4} flexGrow={1}>
-        <Grid
-          w={'full'}
-          templateRows={'1fr'}
-          templateColumns={'repeat(3, 1fr)'}
-          gap={4}
-        >
-          <GridItem>
-            <BirthDaySlider />
-          </GridItem>
-          <GridItem colSpan={2}>
-            <SecurityBox />
-          </GridItem>
-        </Grid>
-        <Grid
-          w={'full'}
-          templateRows={'1fr'}
-          templateColumns={'repeat(3, 1fr)'}
-          gap={4}
-          flexGrow={1}
-        >
-          <GridItem colSpan={3}>
-            <GridBottom />
-          </GridItem>
-        </Grid>
-      </Flex>
-      <WeatherFooter weatherData={weatherData} /> */}
-      {/* {weatherData && <pre>{JSON.stringify(weatherData, null, 2)}</pre>} */}
-    </Flex>
+    <Box w={'full'} h={'100vh'} bgGradient="linear(135deg, red.500, red.800)">
+      <Box w={'1920px'} h={'1080px'} overflow={'hidden'}>
+        <MothersDaySlider />
+      </Box>
+    </Box>
+    // <Flex
+    //   w="full"
+    //   h="100vh"
+    //   bgGradient="linear(135deg, red.500, red.800)"
+    //   // bgGradient="linear(276deg,#2b87da 33%,#29c4a9 77%)"
+    //   flexDir={'column'}
+    // >
+    //   <Flex p={8} flexDir={'column'} gap={4} flexGrow={1}>
+    //     <Grid
+    //       w={'full'}
+    //       templateRows={'1fr'}
+    //       templateColumns={'repeat(3, 1fr)'}
+    //       gap={4}
+    //     >
+    //       <GridItem>
+    //         <BirthDaySlider />
+    //       </GridItem>
+    //       <GridItem colSpan={2}>
+    //         <SecurityBox />
+    //       </GridItem>
+    //     </Grid>
+    //     <Grid
+    //       w={'full'}
+    //       templateRows={'1fr'}
+    //       templateColumns={'repeat(3, 1fr)'}
+    //       gap={4}
+    //       flexGrow={1}
+    //     >
+    //       <GridItem colSpan={3}>
+    //         <GridBottom />
+    //       </GridItem>
+    //     </Grid>
+    //   </Flex>
+    //   <WeatherFooter weatherData={weatherData} />
+    //   {weatherData && <pre>{JSON.stringify(weatherData, null, 2)}</pre>}
+    // </Flex>
   )
 }
