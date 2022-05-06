@@ -30,8 +30,13 @@ export function App() {
   }, [lat, lng])
 
   return (
-    <Box w={'full'} h={'100vh'} bgGradient="linear(135deg, red.500, red.800)">
-      <Box w={'1920px'} h={'1080px'} overflow={'hidden'}>
+    <Box
+      w={'full'}
+      h={'100vh'}
+      bgGradient="linear(135deg, red.500, red.800)"
+      overflow={'hidden'}
+    >
+      <Box w={'1920px'} h={'1080px'}>
         <MothersDaySlider />
       </Box>
     </Box>
