@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Box, Flex, Grid, GridItem, Image } from '@chakra-ui/react'
+import { Box, Center, Flex, Grid, GridItem, Image } from '@chakra-ui/react'
 
 import { BirthDaySlider } from './components/BirthDaySlider'
 import { GridBottom } from './components/GridBottom'
@@ -36,9 +36,9 @@ export function App() {
       bgGradient="linear(135deg, red.500, red.800)"
       overflow={'hidden'}
     >
-      <Box w={'1920px'} h={'1080px'}>
-        <MothersDaySlider />
-      </Box>
+      <Center w={'1920px'} h={'1080px'}>
+        <Image src="/app_itau.jpeg" w={'1436px'} h={'962px'} />
+      </Center>
     </Box>
     // <Flex
     //   w="full"
