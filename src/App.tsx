@@ -33,12 +33,18 @@ export function App() {
     <Box
       w={'full'}
       h={'100vh'}
-      bgGradient="linear(135deg, red.500, red.800)"
+      // bgGradient="linear(135deg, red.500, red.800)"
+      bgImage={'url(/campanha_agasalho/campanha_agasalho_2022.jpg)'}
+      bgRepeat="no-repeat"
+      bgPos={'center'}
       overflow={'hidden'}
     >
-      <Box w={'1920px'} h={'1080px'}>
-        <MothersDaySlider />
-      </Box>
+      {/* <Image
+        src={'/campanha_agasalho/campanha_agasalho_2022.jpg'}
+        fit={'scale-down'}
+      /> */}
+      {/* <Box w={'1920px'} h={'1080px'}>
+      </Box> */}
     </Box>
     // <Flex
     //   w="full"
