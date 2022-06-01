@@ -3,7 +3,7 @@ import { Box, Heading } from '@chakra-ui/react'
 import { PersonCard } from '../PersonCard'
 import { Slider } from '../Slider'
 
-import { personsData as persons } from './personsData'
+import { personsData as persons } from './personsDataJune'
 // import type { BirthDaySliderProps } from './types'
 
 const sliderSettings = {
@@ -26,7 +26,7 @@ export function BirthDaySlider() {
   // })
   // const bgSize = useBreakpointValue({ base: '150px', md: '200px', lg: '280px' })
   return (
-    <Box rounded={'md'} px={'auto'} h={'full'} pos={'relative'} mx={'auto'}>
+    <Box rounded={'md'} px={'auto'} pos={'relative'} mx={'auto'}>
       <Slider settings={sliderSettings}>
         {persons.map((person) => (
           <PersonCard

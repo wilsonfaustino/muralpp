@@ -1,0 +1,1 @@
+export { ImgCampaign } from './ImgCampaign'
