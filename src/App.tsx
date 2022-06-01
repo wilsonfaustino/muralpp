@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Box, Flex, Grid, GridItem, Image } from '@chakra-ui/react'
+import { Box, Center, Flex, Grid, GridItem, Image } from '@chakra-ui/react'
 
 import { BirthDaySlider } from './components/BirthDaySlider'
 import { GridBottom } from './components/GridBottom'
