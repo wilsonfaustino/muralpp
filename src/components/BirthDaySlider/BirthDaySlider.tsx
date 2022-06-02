@@ -9,13 +9,15 @@ import { personsData as persons } from './personsDataJune'
 const sliderSettings = {
   dots: false,
   arrows: false,
-  fade: true,
+  // fade: true,
+  vertical: true,
   infinite: true,
   speed: 500,
   autoplay: true,
   autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
+  pauseOnHover: false,
 }
 
 export function BirthDaySlider() {
@@ -38,7 +40,13 @@ export function BirthDaySlider() {
           />
         ))}
       </Slider>
-      <Heading textAlign={'center'} fontSize={'5xl'} color={'whiteAlpha.900'}>
+      <Heading
+        textAlign={'center'}
+        fontSize={'6xl'}
+        px={24}
+        mt={6}
+        color={'whiteAlpha.900'}
+      >
         Aniversariantes do Mês
       </Heading>
       {/* <Box

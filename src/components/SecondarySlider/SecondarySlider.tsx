@@ -15,6 +15,7 @@ const sliderSettings = {
   autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
+  pauseOnHover: false,
 }
 
 export function SecondarySlider() {

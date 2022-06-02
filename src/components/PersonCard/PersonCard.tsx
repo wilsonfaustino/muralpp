@@ -17,7 +17,7 @@ export function PersonCard({ name, date, role, image }: PersonCardProps) {
       <Box
         role={'group'}
         p={6}
-        maxW={'380px'}
+        maxW={'450px'}
         w={'full'}
         bg={'white'}
         boxShadow={'lg'}
