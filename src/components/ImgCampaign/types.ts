@@ -1,3 +1,3 @@
 export type ImgCampaignProps = {
-  prop?: string
+  imgSrc: string
 }

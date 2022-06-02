@@ -1,15 +1,11 @@
 import { AspectRatio, Image } from '@chakra-ui/react'
 
-// import type { ImgCampaignProps } from './types'
+import type { ImgCampaignProps } from './types'
 
-export function ImgCampaign() {
+export function ImgCampaign(props: ImgCampaignProps) {
   return (
     <AspectRatio w={'full'} ratio={16 / 9}>
-      <Image
-        src={`/campanha_agasalho/campanha_agasalho_2022.jpg`}
-        rounded={'xl'}
-        objectFit={'cover'}
-      />
+      <Image src={props.imgSrc} rounded={'xl'} objectFit={'cover'} />
     </AspectRatio>
   )
 }
