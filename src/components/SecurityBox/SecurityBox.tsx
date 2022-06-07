@@ -22,11 +22,11 @@ export function SecurityBox() {
       bgGradient={'linear-gradient(45deg, #edeaea 0%, #ffffff 99%)'}
     >
       <Stack direction={'column'} spacing={20}>
-        <Heading fontSize={'6xl'} color={'gray.600'}>
+        <Heading fontSize={'6xl'} color={'gray.700'}>
           Saúde e Segurança no trabalho
         </Heading>
         <Flex flexDirection={'row'} gap={3} mt={10} alignItems={'center'}>
-          <List spacing={6} fontSize={'3xl'} fontWeight={'light'}>
+          <List spacing={6} fontSize={'3xl'} fontWeight={'bold'}>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="green.500" />
               Colocamos a saúde e a segurança em primeiro lugar.

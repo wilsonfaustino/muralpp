@@ -24,7 +24,7 @@ export function PrincipleBox({
     >
       <Heading
         textAlign={'center'}
-        color={'gray.600'}
+        color={'gray.800'}
         fontWeight={active ? 'bold' : 'normal'}
       >
         {title}
@@ -62,9 +62,9 @@ export function PrincipleBox({
       </Center>
       <Text
         textAlign={'center'}
-        color={'gray.600'}
+        color={'gray.800'}
         fontSize={'2xl'}
-        fontWeight={active ? 'normal' : 'light'}
+        fontWeight={active ? 'bold' : 'normal'}
       >
         {description}
       </Text>
