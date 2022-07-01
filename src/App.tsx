@@ -63,7 +63,7 @@ export function App() {
       // bgGradient="linear(276deg,#2b87da 33%,#29c4a9 77%)"
       flexDir={'column'}
     >
-      <AspectRatio w={'full'} maxH={'1080px'} ratio={16 / 9}>
+      <AspectRatio maxH={'100vh'} ratio={16 / 9}>
         <Flex p={8} flexDir={'column'} gap={4} flexGrow={1}>
           <Grid
             w={'full'}

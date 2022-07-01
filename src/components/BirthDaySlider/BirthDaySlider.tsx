@@ -3,7 +3,7 @@ import { Box, Heading } from '@chakra-ui/react'
 import { PersonCard } from '../PersonCard'
 import { Slider } from '../Slider'
 
-import { personsData as persons } from './personsDataJune'
+import { personsData as persons } from './personsDataJuly'
 // import type { BirthDaySliderProps } from './types'
 
 const sliderSettings = {
