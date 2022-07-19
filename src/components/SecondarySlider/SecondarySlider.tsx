@@ -23,7 +23,7 @@ export function SecondarySlider() {
     <Box>
       <SlickSlider {...sliderSettings}>
         <SecurityBox />
-        <ImgCampaign imgSrc={'/campanha_agasalho/campanha_agasalho_2022.jpg'} />
+        {/* <ImgCampaign imgSrc={'/campanha_agasalho/campanha_agasalho_2022.jpg'} /> */}
         <ImgCampaign imgSrc={'/alerts/Protejase.jpg'} />
       </SlickSlider>
     </Box>
